@@ -17,7 +17,7 @@ include( 'shared.lua' )
 function GM:PlayerInitialSpawn( pl ) -- this is when the player first joins
 	pl:SetGravity( 1 ) -- Default gravity
 	pl:SetWalkSpeed( 250 ) -- Default 
-	pl:SetRunSpeed( 500 ) --I don't think it needs to be this high for RP, but this is the default RunSped
+	pl:SetRunSpeed( 500 ) -- Default
 end
 
 
