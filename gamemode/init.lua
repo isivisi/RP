@@ -21,8 +21,6 @@ function GM:PlayerInitialSpawn( pl ) // this is when the player first joins
 	pl:SetTeam( 1 ) // this will set the player to team 1 by default
 end
 
-end
-
 function GM:PlayerSpawn( pl ) //This is every time after; so if they die and respawn this will occur
 	if pl:Team() == 1 then
 		pl:Give( "empty_weapon" ) // Default based on loadout
