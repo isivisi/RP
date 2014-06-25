@@ -1,6 +1,6 @@
 "Gamemode"
 {
 	"base"		"sandbox"
-	"title"	        "customGmodRp"
+	"title"	        "RP"
 	"menusystem"	"1"
 }
