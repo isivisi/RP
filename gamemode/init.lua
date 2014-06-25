@@ -23,7 +23,7 @@ end
 
 function GM:PlayerSpawn( pl ) //This is every time after; so if they die and respawn this will occur
 	if pl:Team() == 1 then
-		pl:Give( "empty_weapon" ) // Default based on loadout
+		//pl:Give( "empty_weapon" ) // Default based on loadout
 		pl:SetModel("models/player/Group01/Male_01.mdl")
 	end
 	if pl:Team() == 2 then

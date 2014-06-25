@@ -10,6 +10,11 @@ function GM:Initialize()
 	
 end
 
+CivMdl = { "models/player/Group01/Male_01.mdl",
+"models/player/Group01/Male_02.mdl",
+"models/player/Group01/Male_03.mdl",
+"models/player/Group01/Male_04.mdl" }
+
 team.SetUp(1, "Civilian", Color(255, 0, 0)) // Civilian Team
 team.SetUp(2, "Police", Color(51, 51, 255)) // Police Team
 
@@ -18,4 +23,4 @@ util.PrecacheModel("models/player/Group01/Male_01.mdl")
 util.PrecacheModel("models/player/Group01/Male_02.mdl")
 util.PrecacheModel("models/player/Group01/Male_03.mdl")
 util.PrecacheModel("models/player/Group01/Male_04.mdl")
-util.PrecacheModel("models/player/Police.mdl")
+util.PrecacheModel("models/player/Police.mdl") 
