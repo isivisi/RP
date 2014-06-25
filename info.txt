@@ -1,0 +1,6 @@
+"Gamemode"
+{
+	"base"		"sandbox"
+	"title"	        "customGmodRp"
+	"menusystem"	"1"
+}
