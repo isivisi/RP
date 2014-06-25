@@ -18,7 +18,6 @@ function GM:PlayerInitialSpawn( pl ) -- this is when the player first joins
 	pl:SetGravity( 1 ) -- Default gravity
 	pl:SetWalkSpeed( 250 ) -- Default 
 	pl:SetRunSpeed( 500 ) --I don't think it needs to be this high for RP, but this is the default RunSped
-
 end
 
 
@@ -27,12 +26,9 @@ function GM:PlayerLoadout( pl ) -- should we commit this to the above function a
 	pl:GiveAmmo( 255,	"Pistol", 		true ) --I don't think this is necessary if they start witn no weapon
 	
 	pl:Give( "empty_weapon" ) -- should we make it "weapon_crowbar" ?
-	
 end
 
 function GM:PlayerSpawn( pl ) --This is every time after; so if they die and respawn this will occur
 		
 	pl:Give( "empty_weapon" ) -- Default based on loadout
-	
-	
 end
