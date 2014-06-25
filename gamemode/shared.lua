@@ -10,3 +10,5 @@ function GM:Initialize()
 	
 end
 
+team.SetUp(1, "Civilian", Color(255, 0, 0)) // Civilian Team
+team.SetUp(2, "Police", Color(51, 51, 255)) // Police Team
