@@ -20,7 +20,7 @@ function GM:HUDPaint()
 	local player = localPlayer()
 	local team = localPlayer:team()
 	
-	// will add text for team and job etc...
+	draw.RoundedBox(3, 15, 15, 150, 300, Color(40, 40, 40, 205))
 	
 end
 	
