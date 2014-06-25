@@ -1,3 +1,6 @@
+// rp plugin
+// authors:
+// isivisi, schooled
 
 AddCSLuaFile( "cl_init.lua" )
 AddCSLuaFile( "shared.lua" )
