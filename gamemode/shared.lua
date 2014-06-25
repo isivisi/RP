@@ -14,8 +14,8 @@ team.SetUp(1, "Civilian", Color(255, 0, 0)) // Civilian Team
 team.SetUp(2, "Police", Color(51, 51, 255)) // Police Team
 
 
-util.PrecacheMode1("models/player/Group01/Male_01.mdl")
-util.PrecacheMode1("models/player/Group01/Male_02.mdl")
-util.PrecacheMode1("models/player/Group01/Male_03.mdl")
-util.PrecacheMode1("models/player/Group01/Male_04.mdl")
-util.PrecacheMode1("models/player/Police.mdl")
+util.PrecacheModel("models/player/Group01/Male_01.mdl")
+util.PrecacheModel("models/player/Group01/Male_02.mdl")
+util.PrecacheModel("models/player/Group01/Male_03.mdl")
+util.PrecacheModel("models/player/Group01/Male_04.mdl")
+util.PrecacheModel("models/player/Police.mdl")
