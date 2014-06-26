@@ -9,3 +9,23 @@ function Data:setUserMoney(userid, amount)
 	// to do
 
 end
+
+function Data:setUserJob(userid, job)
+	// to do
+
+end
+
+function Data:addUserItem(userid, item)
+	// to do
+
+end
+
+function Data:removeUserItem(userid, item)
+	// to do
+
+end
+
+function Data:getJobList()
+	// to do
+
+end
