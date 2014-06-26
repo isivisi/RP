@@ -16,15 +16,14 @@ include( 'shared.lua' )
 ---------------------------------------------------------*/
 function GM:PlayerInitialSpawn( pl ) // this is when the player first joins
 	pl:SetGravity( 1 ) // Default gravity
-	pl:SetWalkSpeed( 250 ) // Default 
-	pl:SetRunSpeed( 500 ) // Default
+	pl:SetWalkSpeed( 220 ) // Default 
+	pl:SetRunSpeed( 325 ) // Default
 	pl:SetTeam( 1 ) // this will set the player to team 1 by default
 end
 
 function GM:PlayerSpawn( pl ) //This is every time after; so if they die and respawn this will occur
 	if pl:Team() == 1 then
-		//pl:Give( "empty_weapon" ) // Default based on loadout
-		pl:SetModel("models/player/Group01/Male_01.mdl")
+		pl:SetModel(table.Random(CivMdl))
 	end
 	if pl:Team() == 2 then
 		pl:Give( "weapon_stunstick" )
