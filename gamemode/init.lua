@@ -32,3 +32,19 @@ function GM:PlayerSpawn( pl ) //This is every time after; so if they die and res
 		pl:SetModel("models/player/Police.mdl")
 	end
 end
+
+ function team_1( pl ) 
+ 
+     pl:SetTeam( 1 )
+	 pl:Spawn()
+	 pl:StripWeapons()
+ end 
+ 
+ function team_2( pl ) 
+ 
+     pl:SetTeam( 2 ) 
+	 pl:Spawn()
+ end 
+ 
+ concommand.Add( "team_1", team_1 )
+ concommand.Add( "team_2", team_2 )
