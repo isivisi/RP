@@ -17,25 +17,69 @@
 */
 
 Data = class(function(d, loc)
-	d.loc = loc // this would be the location of the data, ex "c:/gmod/garrysmod/gamemodes/RP/data
+	d.loc = string.sub( debug.getinfo(1).short_src, 1, string.len(debug.getinfo(1).short_src)-*** ) + loc // this would be the location of the data, ex "c:/gmod/garrysmod/gamemodes/RP/data
 	end)
 	
-function Data:setUserMoney(userid, amount)
+// Gets a data file for a specific user
+function Data:getFile(ply, fileName, usage)
+
+	local steamFileName = d.loc + "/" + fileName .. "_" .. ply:SteamID():gsub(':', '') // adds the steamid after the name of the file to make it unique to players
+	local dataFile = io.open(steamFileName, usage)
+	
+	if dataFile == nil then
+	
+		dataFile = io.open(steamFileName, 'w')
+		
+		// write empty files
+		
+		io.output(dataFile)
+		
+		if fileName == "info" then
+		
+			io.write("0\n") // default money
+			io.write("NONE\n") // default no job
+			
+			io.close(dataFile)
+			dataFile = io.open(steamFileName, usage)
+		
+		end
+		
+		if fileName == "items" then
+		
+			io.close(dataFile)
+			dataFile = io.open(steamFileName, usage)
+		
+		end
+		
+	end
+		
+	return dataFile
+
+end
+	
+function Data:getUserMoney(ply, amount)
+	
+	local dataFile = Data:getFile(ply, "info", 'r')
+	io.input(dataFile)
+	local money = tonumber(io.read()) // gets first line with money details
+	
+	io.close(dataFile)
+	
+	return money
+
+end
+
+function Data:setUserJob(ply, job)
 	// to do
 
 end
 
-function Data:setUserJob(userid, job)
+function Data:addUserItem(ply, item)
 	// to do
 
 end
 
-function Data:addUserItem(userid, item)
-	// to do
-
-end
-
-function Data:removeUserItem(userid, item)
+function Data:removeUserItem(ply, item)
 	// to do
 
 end

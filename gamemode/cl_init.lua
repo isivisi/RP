@@ -1,5 +1,7 @@
 include( 'shared.lua' )
 
+local money = 0 // the global money the server says the player has
+
 // custom hud font
 surface.CreateFont("HudFont",
 	{
@@ -27,12 +29,13 @@ function GM:HUDPaint()
 	local player = LocalPlayer()
 	health = player:Health()
 	
-	draw.RoundedBox(5, 20, 15, 300, 150, Color(40, 40, 40, 205))
-	draw.RoundedBox(0, 25, 25, 290, 25, Color(5, 200, 55, 100))
+	draw.RoundedBox(3, 20, ScrH() - 75, 300, 50, Color(40, 40, 40, 205))
+	draw.RoundedBox(3, 25, ScrH() - 70, 290, 40, Color(5, 200, 55, 100))
+	draw.RoundedBox(3, 325, ScrH() - 75, 500, 50, Color(40, 40, 40, 205))
 	
-	draw.DrawText("Job title", "HudFont", 27, 25, Color(15, 15, 15, 255))
+	draw.DrawText("Job title", "HudFont", 30, ScrH() - 65, Color(15, 15, 15, 255))
 	
-	draw.DrawText("Cash: %$", "HudFont", 27, 55, Color(15, 15, 15, 255))
+	draw.DrawText("Cash: %$ | Other: ", "HudFont", 335, ScrH() - 65, Color(15, 15, 15, 255))
 	
 end
 	

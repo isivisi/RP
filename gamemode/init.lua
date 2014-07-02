@@ -4,8 +4,11 @@
 
 AddCSLuaFile( "cl_init.lua" )
 AddCSLuaFile( "shared.lua" )
+AddCSLuaFile( "Data.lua" )
 
 include( 'shared.lua' )
+
+//userData = Data("userData") // this data is only manipulated and calculated serverside. 
 
 
 // Serverside only stuff goes here
@@ -38,7 +41,7 @@ end
      pl:SetTeam( 1 )
 	 pl:Spawn()
 	 pl:StripWeapons()
- end 
+ end  
  
  function team_2( pl ) 
  
